@@ -1,0 +1,23 @@
+data:
+  image:  busybox
+mysql:
+  image: mysql
+  volumes_from:
+    - data
+  environment:
+    MYSQL_ROOT_PASSWORD: "2exndYCLD8SLUUs6h68TYwASNRhAPWB"
+    MYSQL_DATABASE: "piwik"
+    MYSQL_USER: "piwik"
+    MYSQL_PASSWORD: "vdZggFUwSZcKcq9fFczH7AsjAfgF59r"
+app:
+  image: juev/piwik
+  links:
+    - mysql
+  cap_add:
+    - NET_ADMIN
+  ports:
+    - "80:80"
+  environment:
+    PIWIK_MYSQL_USER: "piwik"
+    PIWIK_MYSQL_PASSWORD: "vdZggFUwSZcKcq9fFczH7AsjAfgF59r"
+    PIWIK_RELATIVE_URL_ROOT: "/"
