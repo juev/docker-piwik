@@ -22,6 +22,7 @@ For running simple use:
 
 After starting new instance for Piwik, please use next values:
 
-    Database name (host): mysql
-    Database login: piwik
-    Database password: vdZggFUwSZcKcq9fFczH7AsjAfgF59r
+    Database Server: mysql
+    Login: piwik
+    Password: vdZggFUwSZcKcq9fFczH7AsjAfgF59r
+    Database name: piwik
