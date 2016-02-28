@@ -9,6 +9,7 @@ mysql:
     MYSQL_DATABASE: "piwik"
     MYSQL_USER: "piwik"
     MYSQL_PASSWORD: "vdZggFUwSZcKcq9fFczH7AsjAfgF59r"
+  restart: always
 app:
   image: juev/piwik
   links:
@@ -21,3 +22,4 @@ app:
     PIWIK_MYSQL_USER: "piwik"
     PIWIK_MYSQL_PASSWORD: "vdZggFUwSZcKcq9fFczH7AsjAfgF59r"
     PIWIK_RELATIVE_URL_ROOT: "/"
+  restart: always
